@@ -1,4 +1,4 @@
-const orm = require("../db/orm");
+const orm = require("../config/orm");
 
 const burger = {
     all: (cb) => {
