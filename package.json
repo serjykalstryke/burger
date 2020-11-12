@@ -1,0 +1,24 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "# Node Express Handlebars",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serjykalstryke/burger.git"
+  },
+  "author": "David Stinnett",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/serjykalstryke/burger/issues"
+  },
+  "homepage": "https://github.com/serjykalstryke/burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mysql": "^2.18.1"
+  }
+}
