@@ -1,4 +1,4 @@
-const connection = require("./connection");
+const connection = require("../config/connection.js");
 
 function printQuestionMarks(num) {
     let arr = [];
@@ -42,11 +42,12 @@ const orm = {
         let queryString = "INSERT INTO " + table;
 
         queryString += " (";
-        queryString += console.toString();
+        queryString += cols.toString();
         queryString += ") ";
         queryString += " VALUES (";
         queryString += printQuestionMarks(vals.length);
         queryString += ") ";
+
         console.log(queryString);
 
         connection.query(queryString, vals, (err, result) => {
