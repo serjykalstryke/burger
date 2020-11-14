@@ -18,6 +18,7 @@ const burger = {
     },
 
     delete: (condition, cb) => {
+        console.log(condition)
         orm.delete("burgers", condition, (res) => {
             cb(res);
         });

@@ -1,6 +1,6 @@
 <h1>BURGER TIME!</h1>
 
-<h2>Burgers I haven't devoured!</h2>
+<h2>Burgers I can order!</h2>
 
 <ul>
     {{#each burgers}}
@@ -10,7 +10,7 @@
     {{/each}}
 </ul>
 
-<h2>These Burgers have been devoured!!</h2>
+<h2>Burger I have here that I can devour!!</h2>
 <ul>
     {{#each burgers}}
         {{#if devoured}}
@@ -23,7 +23,7 @@
 <form class = "create-form">
     <div class="form-group">
         <label for="bu">Burger Name:</label>
-        <input type="text" id="bu" name="burger_name">
+        <input type="text" id="br" name="burger_name">
     </div>
 
     <div class="form-group">

@@ -44,7 +44,7 @@ const orm = {
         queryString += " (";
         queryString += cols.toString();
         queryString += ") ";
-        queryString += " VALUES (";
+        queryString += "VALUES (";
         queryString += printQuestionMarks(vals.length);
         queryString += ") ";
 
@@ -67,7 +67,11 @@ const orm = {
         queryString += " WHERE ";
         queryString += condition;
 
+
+
         console.log(queryString);
+
+        console.log({table, condition, cb})
         connection.query(queryString, (err, result) => {
             if (err) {
                 throw err;
@@ -81,6 +85,7 @@ const orm = {
         let queryString = "DELETE FROM " + table;
         queryString += " WHERE ";
         queryString += condition;
+        console.log(queryString)
 
         connection.query(queryString, (err, result) => {
             if (err) {
