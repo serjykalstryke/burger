@@ -23,5 +23,9 @@ span {
     padding-top: 10px
 } */
 
+.center {
+    display: flex;
+    justify-content: center;
+}
 
 
