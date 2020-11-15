@@ -1,0 +1,27 @@
+body {
+    background-image: url("https://wallpapercave.com/wp/wp2186059.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+ul {
+    list-style-type: none;
+    text-align: left;
+  }
+
+  /*
+span {
+    display: table-cell;
+  }
+
+.right {
+    text-align: right;
+  }
+
+.list {
+    padding-top: 10px
+} */
+
+
+

@@ -1,6 +1,30 @@
-<div class="jumbotron">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #77216F;">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Github Repo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Heroku Deployment</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="jumbotron" style="background-color: rgba(174, 167, 159, 0.3); ">
     <div class="jumbo-container py-5">
-        <h1 class="dispaly-5 text-center">BURGER TIME!</h1>
+        <h1 class="dispaly-5 text-center" style="color: #111111">BURGER TIME!</h1>
         <div class="row">
             <div class="col-md-8 mx-auto my-2">
                 <p class="lead text-center">
@@ -20,7 +44,7 @@
             <div class="row">
                 <div class="col-md-8 mx-auto my-2 text-center">
                     <div class="form-check form-check-inline">
-                        <input type="radio" name="devoured" value="1" checked> 
+                        <input type="radio" name="devoured" value="1" checked>
                         <label class="form-check-label" for="inlineRadio1">I Have!</label>
                     </div>
                     <div class="form-check form-check-inline">
@@ -33,25 +57,21 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container text-center" style="background-color:rgba(174, 167, 159, 0.3);">
     <div class="row">
-        <div class="col-6">
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                    <h1 class="display-4">Burgers I can order!</h1>
+        <div class="col-md-5 list">
+            <h4>Burgers I can order!</h4>
 
-                    <ul>
-                        {{#each burgers}}
-                        {{#unless devoured}}
-                        {{> burgers/burger-block devoured=false}}
-                        {{/unless}}
-                        {{/each}}
-                    </ul>
-                </div>
-            </div>
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                {{> burgers/burger-block devoured=false}}
+                {{/unless}}
+                {{/each}}
+            </ul>
         </div>
-        <div class="col-6">
-            <h2>Burger I have here that I can devour!!</h2>
+        <div class="col-md-5 list">
+            <h4>Burgers I can devour!!</h4>
             <ul>
                 {{#each burgers}}
                 {{#if devoured}}
@@ -61,20 +81,3 @@
             </ul>
         </div>
     </div>
-</div>
-
-<h2>Add A Burger!!!!</h2>
-<form class="create-form">
-    <div class="form-group">
-        <label for="bu">Burger Name:</label>
-        <input type="text" id="br" name="burger_name">
-    </div>
-
-    <div class="form-group">
-        <label for="devoured">Have you devoured this one?</label>
-        <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-        <input type="radio" name="devoured" value="0"> Not Devoured!
-    </div>
-
-    <button type="submit">Add Burger!</button>
-</form>
