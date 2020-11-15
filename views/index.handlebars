@@ -1,26 +1,70 @@
-<h1>BURGER TIME!</h1>
+<div class="jumbotron">
+    <div class="jumbo-container py-5">
+        <h1 class="dispaly-5 text-center">BURGER TIME!</h1>
+        <div class="row">
+            <div class="col-md-8 mx-auto my-2">
+                <p class="lead text-center">
+                    lorem ipsum
+                </p>
+            </div>
+        </div>
+        <form class="create-form">
+            <div class="row">
+                <div class="col-md-8 mx-auto my-2">
+                    <div class="form-group text-center">
+                        <input type="text" id="br" name="burger_name" placeholder="Burger Name">
+                        <button type="submit">Add Burger!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 mx-auto my-2 text-center">
+                    <div class="form-check form-check-inline">
+                        <input type="radio" name="devoured" value="1" checked> 
+                        <label class="form-check-label" for="inlineRadio1">I Have!</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" name="devoured" value="0">
+                        <label class="form-check-label" for="inlineRadio2">Order!</label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 
-<h2>Burgers I can order!</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">Burgers I can order!</h1>
 
-<ul>
-    {{#each burgers}}
-        {{#unless devoured}}
-            {{> burgers/burger-block devoured=false}}
-        {{/unless}}
-    {{/each}}
-</ul>
-
-<h2>Burger I have here that I can devour!!</h2>
-<ul>
-    {{#each burgers}}
-        {{#if devoured}}
-            {{> burgers/burger-block devoured=true}}
-        {{/if}}
-    {{/each}}
-</ul>
+                    <ul>
+                        {{#each burgers}}
+                        {{#unless devoured}}
+                        {{> burgers/burger-block devoured=false}}
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <h2>Burger I have here that I can devour!!</h2>
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/burger-block devoured=true}}
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
 
 <h2>Add A Burger!!!!</h2>
-<form class = "create-form">
+<form class="create-form">
     <div class="form-group">
         <label for="bu">Burger Name:</label>
         <input type="text" id="br" name="burger_name">
