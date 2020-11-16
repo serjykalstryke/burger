@@ -10,7 +10,7 @@ ul {
     text-align: left;
   }
 
-  /*
+
 span {
     display: table-cell;
   }
@@ -21,14 +21,14 @@ span {
 
 .list {
     padding-top: 10px
-} */
+} 
 
 .center {
     display: flex;
     justify-content: center;
 }
 
-h1,h2,h3,h4,h5,h6,p,li {
+h1,h2,h3,h4,h5,h6,p,li,input,label {
     color: white
 }
 
